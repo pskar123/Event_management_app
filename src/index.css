@@ -1,0 +1,56 @@
+:root { --accent: #ffcc00; }
+.html, body, #root { height: 100%; }
+.body, body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin:0; font-family: Inter, Roboto, Arial, sans-serif;
+	/* Very-light party/celebration background image for the whole app.
+		 The overlay opacity is lowered so the image reads softly but content stays readable. */
+	background-image: linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.78)), url('https://images.unsplash.com/photo-1505575967457-6b0b6e40a03c?q=80&w=1800&auto=format&fit=crop');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.hero-bg { background: transparent; color: inherit; padding: 80px 0; }
+.section { padding: 64px 0; }
+.brand-flag { display: inline-block; width: 42px; height: 28px; border-radius: 4px; background: linear-gradient(90deg,#000 33%, #dd0000 33% 66%, #ffcc00 66%); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.card-zoom:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: transform .25s, box-shadow .25s;}
+
+/* White translucent rectangle used in the hero to improve readability */
+.hero-card-wrapper {
+	/* Very faint, faded rectangle: lower opacity, gentle blur and subtle border */
+	background: rgba(255,255,255,0.62); /* faint white so background shows through */
+	color: rgba(10,10,10,0.95);
+	padding: 18px 20px;
+	border-radius: 12px;
+	border: 1px solid rgba(255,255,255,0.48);
+	box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	transition: background-color .24s ease, box-shadow .24s ease;
+	max-width: 720px;
+}
+
+/* Highlighted phrase with colored drop shadow for visibility */
+.hero-highlight {
+	/* colorful soft glow to make the highlight pop over the light background */
+	text-shadow: 0 2px 0 rgba(255,255,255,0.92), 0 8px 28px rgba(155, 89, 182, 0.16);
+	color: rgba(10,10,10,0.96);
+	display: inline-block;
+}
+
+/* make sections transparent so the app background shows through consistently */
+.section { background: transparent; }
+
+/* package card styling */
+.package-card {
+	transition: transform .18s ease, box-shadow .18s ease;
+}
+.package-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+}
+
+/* small helpers */
+.btn-small { padding: 6px 12px; font-size: 0.9rem }
+
+/* footer helpers */
+.footer a { color: inherit; }
+.footer input { border-radius: 6px }
